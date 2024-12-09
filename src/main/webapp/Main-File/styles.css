@@ -1,0 +1,223 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: "Poppins", sans-serif; */
+  font-family: obviously-narrow;
+  background-color: #f1f1f1;
+  margin-top: 60px;
+}
+
+/* Header and Navbar */
+.navbar {
+  background-color: #ff921c;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.navbar nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar nav ul li {
+  margin: 0 15px;
+}
+
+.navbar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover {
+  color: #000;
+}
+
+/* Main Banner */
+.banner {
+  /* background: url("img/banner.png") no-repeat center center/cover; */
+  background-color: #eca427;
+  color: white;
+  padding: 100px 30px;
+  text-align: center;
+  position: relative;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 45px;
+}
+
+.btn-main {
+  padding: 28px 40px;
+  /* background-color: #00b4d8; */
+  /* color: white; */
+  font-size: 1.2rem;
+  border: 2px #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  /* border-style: none; */
+  font-family: obviously;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn-main:hover {
+  background-color: #16bdfa;
+}
+
+/* Featured Books */
+.featured-books,
+.recommended-books,
+.genres {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Book Cards */
+.books-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.book-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 315px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.book-card img {
+  width: 275px;
+  height: 450px;
+  border-radius: 8px;
+}
+
+.book-card h3 {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.book-card p {
+  font-size: 1rem;
+  color: #888;
+}
+
+.btn-rent {
+  /* background-color: #2f4f4f; */
+  /* color: white; */
+  /* border: none; */
+  padding: 10px 7px;
+  /* font-size: 1rem; */
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  background: #000;
+  color: #fff;
+  border-style: none;
+  font-family: obviously;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.btn-rent:hover {
+  background-color: #16bdfa;
+}
+
+/* Genres Section */
+.genre-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.genre-item {
+  text-align: center;
+  margin: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.genre-item img {
+  width: 220px;
+  height: 190px;
+  border-radius: 8px;
+}
+
+.genre-item h4 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #ff921c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .books-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .genre-list {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rent a Book</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="navbar">
+        <div class="logo">ManageKit.</div>
+        <nav>
+          <ul>
+            <li><a href="../Main-File/index.html">Home</a></li>
+            <li><a href="../Main-File/index.html#browse-books">Books</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">My Account</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Rent Book Form -->
+    <section class="rent-section">
+      <div class="form-container">
+        <h1>Rent a Book</h1>
+        <form id="rentBookForm">
+          <div class="form-group">
+            <label for="bookSelect">Select Book:</label>
+            <select id="bookSelect" required>
+              <option value="">-- Select a Book --</option>
+              <option value="Bigger & Bettery">Bigger & Bettery</option>
+              <option value="The Labyrnith of Whispers">
+                The Labyrnith of Whispers
+              </option>
+              <option value="The Way of the Nameless">
+                The Way of the Nameless
+              </option>
+              <option value="When Life Begins to Whisper">
+                When Life Begins to Whisper
+              </option>
+              <option value="Panchatantra">Panchatantra</option>
+              <option value="James and the Giant Peach">
+                James and the Giant Peach
+              </option>
+              <option value="Harry Potter">Harry Potter</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="userName">Your Name:</label>
+            <input
+              type="text"
+              id="userName"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="userEmail">Your Email:</label>
+            <input
+              type="email"
+              id="userEmail"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <button type="submit" class="rent-btn">Rent Book</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Confirmation Popup -->
+    <div id="confirmationPopup" class="popup">
+      <div class="popup-content">
+        <h2>Success!</h2>
+        <p id="confirmationMessage"></p>
+        <button class="close-popup">Close</button>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
