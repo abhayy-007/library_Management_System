@@ -1,0 +1,59 @@
+/* General body styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container for success message */
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Title styling */
+h1 {
+  font-size: 28px;
+  color: #28a745; /* Green color to indicate success */
+  margin-bottom: 20px;
+}
+
+/* Link styling */
+a {
+  display: inline-block;
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+  a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

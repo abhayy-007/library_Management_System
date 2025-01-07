@@ -1,0 +1,76 @@
+-------------------------------------------------------------------------------
+Test set: BooksDAOTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.462 s <<< FAILURE! -- in BooksDAOTest
+BooksDAOTest.testUpdateCopies -- Time elapsed: 0.076 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at com.library.dao.BooksDAO.insertBook(BooksDAO.java:46)
+	at BooksDAOTest.setUp(BooksDAOTest.java:21)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at com.library.dao.BooksDAO.deleteBook(BooksDAO.java:115)
+		at BooksDAOTest.tearDown(BooksDAOTest.java:28)
+		... 3 more
+
+BooksDAOTest.testInsertBook -- Time elapsed: 0.079 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at com.library.dao.BooksDAO.insertBook(BooksDAO.java:46)
+	at BooksDAOTest.setUp(BooksDAOTest.java:21)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at com.library.dao.BooksDAO.deleteBook(BooksDAO.java:115)
+		at BooksDAOTest.tearDown(BooksDAOTest.java:28)
+		... 3 more
+
+BooksDAOTest.testDeleteBook -- Time elapsed: 0.104 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at com.library.dao.BooksDAO.insertBook(BooksDAO.java:46)
+	at BooksDAOTest.setUp(BooksDAOTest.java:21)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at com.library.dao.BooksDAO.deleteBook(BooksDAO.java:115)
+		at BooksDAOTest.tearDown(BooksDAOTest.java:28)
+		... 3 more
+
+BooksDAOTest.testSelectAllBooks -- Time elapsed: 0.063 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at com.library.dao.BooksDAO.insertBook(BooksDAO.java:46)
+	at BooksDAOTest.setUp(BooksDAOTest.java:21)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at com.library.dao.BooksDAO.deleteBook(BooksDAO.java:115)
+		at BooksDAOTest.tearDown(BooksDAOTest.java:28)
+		... 3 more
+
+BooksDAOTest.testSelectAllUsers -- Time elapsed: 0.040 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at com.library.dao.BooksDAO.insertBook(BooksDAO.java:46)
+	at BooksDAOTest.setUp(BooksDAOTest.java:21)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at com.library.dao.BooksDAO.deleteBook(BooksDAO.java:115)
+		at BooksDAOTest.tearDown(BooksDAOTest.java:28)
+		... 3 more
+
+BooksDAOTest.testSelectBookByID -- Time elapsed: 0.036 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at com.library.dao.BooksDAO.insertBook(BooksDAO.java:46)
+	at BooksDAOTest.setUp(BooksDAOTest.java:21)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at com.library.dao.BooksDAO.deleteBook(BooksDAO.java:115)
+		at BooksDAOTest.tearDown(BooksDAOTest.java:28)
+		... 3 more
+

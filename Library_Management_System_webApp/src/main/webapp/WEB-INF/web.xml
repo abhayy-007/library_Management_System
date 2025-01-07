@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <display-name>Archetype Created Web Application</display-name>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.css</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.img</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.png</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome file -->
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+    
+     <servlet>
+        <servlet-name>BooksServlet</servlet-name>
+        <servlet-class>com.library.controller.BooksServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>BooksServlet</servlet-name>
+        <url-pattern>/booksServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.library.controller.LoginServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AdminManageStaffsServlet</servlet-name>
+        <servlet-class>com.library.controller.AdminManageStaffsServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>AdminManageStaffsServlet</servlet-name>
+        <url-pattern>/adminManageStaffsServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RentBookServlet</servlet-name>
+        <servlet-class>com.library.controller.RentBookServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>RentBookServlet</servlet-name>
+        <url-pattern>/RentBookServlet</url-pattern>
+    </servlet-mapping>
+
+	<servlet>
+        <servlet-name>ViewAllStaffsServlet</servlet-name>
+        <servlet-class>com.library.controller.ViewAllStaffsServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ViewAllStaffsServlet</servlet-name>
+        <url-pattern>/ViewAllStaffsServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>FetchBooksServlet</servlet-name>
+        <servlet-class>com.library.controller.FetchBooksServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>FetchBooksServlet</servlet-name>
+        <url-pattern>/FetchBooksServlet</url-pattern>
+    </servlet-mapping>
+</web-app>

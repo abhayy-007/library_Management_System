@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: AdminDAOTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 1.101 s <<< FAILURE! -- in AdminDAOTest
+AdminDAOTest.testAuthenticateValidAdmin -- Time elapsed: 0.690 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at AdminDAOTest.setUp(AdminDAOTest.java:24)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at AdminDAOTest.tearDown(AdminDAOTest.java:40)
+		... 3 more
+
+AdminDAOTest.testAuthenticateEmptyValues -- Time elapsed: 0.066 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at AdminDAOTest.setUp(AdminDAOTest.java:24)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at AdminDAOTest.tearDown(AdminDAOTest.java:40)
+		... 3 more
+
+AdminDAOTest.testAuthenticateInvalidAdmin -- Time elapsed: 0.115 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at AdminDAOTest.setUp(AdminDAOTest.java:24)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at AdminDAOTest.tearDown(AdminDAOTest.java:40)
+		... 3 more
+
+AdminDAOTest.testAuthenticateNullValues -- Time elapsed: 0.048 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at AdminDAOTest.setUp(AdminDAOTest.java:24)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at AdminDAOTest.tearDown(AdminDAOTest.java:40)
+		... 3 more
+

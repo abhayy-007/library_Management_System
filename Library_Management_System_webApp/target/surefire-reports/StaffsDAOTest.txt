@@ -1,0 +1,74 @@
+-------------------------------------------------------------------------------
+Test set: StaffsDAOTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.676 s <<< FAILURE! -- in StaffsDAOTest
+StaffsDAOTest.testAuthenticateFailure -- Time elapsed: 0.056 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at StaffsDAOTest.setUp(StaffsDAOTest.java:25)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at StaffsDAOTest.tearDown(StaffsDAOTest.java:43)
+		... 3 more
+
+StaffsDAOTest.testDeleteStaffSuccessful -- Time elapsed: 0.103 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at StaffsDAOTest.setUp(StaffsDAOTest.java:25)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at StaffsDAOTest.tearDown(StaffsDAOTest.java:43)
+		... 3 more
+
+StaffsDAOTest.testInsertStaffFailureDuplicateID -- Time elapsed: 0.014 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at StaffsDAOTest.setUp(StaffsDAOTest.java:25)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at StaffsDAOTest.tearDown(StaffsDAOTest.java:43)
+		... 3 more
+
+StaffsDAOTest.testAuthenticateSuccessful -- Time elapsed: 0.098 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at StaffsDAOTest.setUp(StaffsDAOTest.java:25)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at StaffsDAOTest.tearDown(StaffsDAOTest.java:43)
+		... 3 more
+
+StaffsDAOTest.testDeleteStaffFailureInvalidID -- Time elapsed: 0.056 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at StaffsDAOTest.setUp(StaffsDAOTest.java:25)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at StaffsDAOTest.tearDown(StaffsDAOTest.java:43)
+		... 3 more
+
+StaffsDAOTest.testInsertStaffSuccessful -- Time elapsed: 0.101 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at StaffsDAOTest.setUp(StaffsDAOTest.java:25)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at StaffsDAOTest.tearDown(StaffsDAOTest.java:43)
+		... 3 more
+
+StaffsDAOTest.testSelectAllUsers -- Time elapsed: 0.032 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at StaffsDAOTest.setUp(StaffsDAOTest.java:25)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at StaffsDAOTest.tearDown(StaffsDAOTest.java:43)
+		... 3 more
+

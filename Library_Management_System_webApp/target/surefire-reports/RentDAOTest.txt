@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: RentDAOTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.348 s <<< FAILURE! -- in RentDAOTest
+RentDAOTest.testRentBookWhenNoCopiesLeft -- Time elapsed: 0.097 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at RentDAOTest.setUp(RentDAOTest.java:24)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at RentDAOTest.tearDown(RentDAOTest.java:43)
+		... 3 more
+
+RentDAOTest.testRentBookWithNullValues -- Time elapsed: 0.023 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at RentDAOTest.setUp(RentDAOTest.java:24)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at RentDAOTest.tearDown(RentDAOTest.java:43)
+		... 3 more
+
+RentDAOTest.testRentBookSuccessful -- Time elapsed: 0.123 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at RentDAOTest.setUp(RentDAOTest.java:24)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at RentDAOTest.tearDown(RentDAOTest.java:43)
+		... 3 more
+
+RentDAOTest.testRentBookWithInvalidBookID -- Time elapsed: 0.052 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+	at RentDAOTest.setUp(RentDAOTest.java:24)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "connection" is null
+		at RentDAOTest.tearDown(RentDAOTest.java:43)
+		... 3 more
+
