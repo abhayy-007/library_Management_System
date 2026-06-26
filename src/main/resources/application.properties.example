@@ -1,0 +1,6 @@
+# MongoDB connection (replace with your own URI)
+mongodb.uri=mongodb://username:password@host1:27017,host2:27017/?ssl=true&replicaSet=atlas-xxx-shard-0&authSource=admin&retryWrites=true
+mongodb.database=lmsdb
+
+# JWT secret (base64-encoded, at least 256 bits)
+jwt.secret=your-base64-encoded-secret-here

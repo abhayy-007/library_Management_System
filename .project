@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>library_management_web_app</name>
+	<name>Library_Management_System_webApp</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -36,7 +36,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1731516831151</id>
+			<id>1735221021025</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

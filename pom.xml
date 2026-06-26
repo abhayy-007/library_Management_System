@@ -8,30 +8,131 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>library_management_web_app Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+
 	<properties>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
+		<maven.compiler.release>25</maven.compiler.release>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
 	<dependencies>
+		<!-- Servlet API — provided by Tomcat at runtime -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>6.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- JSTL: impl jar only — it already bundles the API classes.
+		     Having both jars causes hundreds of "scanned from multiple locations" warnings. -->
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+
+		<!-- MongoDB driver -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongodb-driver-sync</artifactId>
+			<version>5.5.1</version>
+		</dependency>
+
+		<!-- SLF4J runtime logging (MongoDB driver needs this at runtime) -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>2.0.16</version>
+		</dependency>
+
+		<!-- JWT -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>0.12.6</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>0.12.6</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>0.12.6</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- Testing -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.11.4</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.33</version>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.11.4</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 	<build>
 		<finalName>library_management_web_app</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.13.0</version>
+				<configuration>
+					<release>25</release>
+				</configuration>
+			</plugin>
+
+			<!--
+			  Cargo + embedded Tomcat 10.1
+			  ─────────────────────────────
+			  Tomcat does NOT use ASM for annotation scanning → no "class file version 69"
+			  errors with Java 25, unlike Jetty.
+
+			  HOW TO RUN:
+			    mvn clean package cargo:run
+
+			  You MUST include "package" so the WAR is built before Cargo deploys it.
+			  "mvn clean cargo:run" alone skips the build → WAR not found → ERROR.
+
+			  Access at: http://localhost:8090/library_management_web_app/
+			-->
+			<plugin>
+				<groupId>org.codehaus.cargo</groupId>
+				<artifactId>cargo-maven3-plugin</artifactId>
+				<version>1.10.14</version>
+				<configuration>
+					<container>
+						<containerId>tomcat10x</containerId>
+						<type>embedded</type>
+						<!--
+						  System properties for the embedded container (same JVM as Maven).
+						  These fix MongoDB Atlas +srv DNS failures on university WiFi by
+						  routing all JVM DNS queries through Google's public DNS (8.8.8.8)
+						  instead of the university DNS that doesn't serve SRV records.
+						-->
+						<systemProperties>
+							<sun.net.spi.nameservice.nameservers>8.8.8.8,1.1.1.1</sun.net.spi.nameservice.nameservers>
+							<sun.net.spi.nameservice.provider.1>dns,sun</sun.net.spi.nameservice.provider.1>
+							<!-- JNDI DNS context used by the MongoDB driver for SRV lookups -->
+							<com.sun.jndi.dns.url>dns://8.8.8.8</com.sun.jndi.dns.url>
+						</systemProperties>
+					</container>
+					<configuration>
+						<properties>
+							<cargo.servlet.port>8090</cargo.servlet.port>
+						</properties>
+					</configuration>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>
